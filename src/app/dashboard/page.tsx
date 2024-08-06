@@ -124,7 +124,7 @@ const DashboardPage = async () => {
                                 </div>
 
                             </TableCell>
-                            <TableCell>
+                            <TableCell className='hidden sm:table-cell'>
                                 status
                             </TableCell>
                             <TableCell>{order.createdAt.toLocaleDateString()}</TableCell>
