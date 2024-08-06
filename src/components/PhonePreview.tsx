@@ -1,7 +1,7 @@
 "use client";
 
 import { CaseColor } from "@prisma/client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AspectRatio } from "./ui/aspect-ratio";
 import { cn } from "@/lib/utils";
 
@@ -25,6 +25,21 @@ const PhonePreview = ({
   if(color === "blue") caseBackgroundColor = "bg-blue-950"
    if(color === "rose") caseBackgroundColor = "bg-rose-950"
     if(color === "yellow") caseBackgroundColor = "bg-yellow-950"
+
+    const handleResize = () => {
+      if(!ref.current) return
+      const {width, height} = ref.current.getBoundingClientRect()
+      setRenderedDimensions({width, height})
+    }
+
+     useEffect(() => {
+      handleResize()
+
+      window.addEventListener("resize", handleResize)
+
+      return () => window.removeEventListener("resize", handleResize)
+
+     }, [ref.current])
   return (
     <AspectRatio ref={ref} ratio={3000 / 2001} className="relative">
       <div
