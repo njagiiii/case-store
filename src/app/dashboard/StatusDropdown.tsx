@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils'
 import { OrderStatus } from '@prisma/client'
 import { useMutation } from '@tanstack/react-query'
 import { Check, ChevronsUpDown } from 'lucide-react'
-import { changeOrderStatus } from './actions'
+import { changeOrderStatus } from './action'
 import { useRouter } from 'next/navigation'
 
 const LABEL_MAP: Record<keyof typeof OrderStatus, string> = {
