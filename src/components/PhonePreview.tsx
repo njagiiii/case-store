@@ -21,10 +21,10 @@ const PhonePreview = ({
     width: 0,
   });
 
-  let caseBackgroundColor = 'bg-zinc-950'
+  let caseBackgroundColor = 'bg-zinc-900'
   if(color === "blue") caseBackgroundColor = "bg-blue-950"
    if(color === "rose") caseBackgroundColor = "bg-rose-950"
-    if(color === "yellow") caseBackgroundColor = "bg-yellow-950"
+    if(color === "yellow") caseBackgroundColor = "bg-yellow-900"
 
     const handleResize = () => {
       if(!ref.current) return
