@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { formatPrice } from '@/lib/utils'
 import { Progress } from '@/components/ui/progress'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import StatusDropdown from './StatusDropdown'
 
 
 const DashboardPage = async () => {
@@ -125,7 +126,7 @@ const DashboardPage = async () => {
 
                             </TableCell>
                             <TableCell className='hidden sm:table-cell'>
-                                status
+                                <StatusDropdown id={order.id} orderStatus={order.status}/>
                             </TableCell>
                             <TableCell>{order.createdAt.toLocaleDateString()}</TableCell>
                             <TableCell className='text-right'>{formatPrice(order.amount)}</TableCell>
