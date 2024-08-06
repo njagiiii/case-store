@@ -50,18 +50,18 @@ model Configuration {
   width           Int
   height          Int
   imageUrl        String
+  color           CaseColor?
   model           PhoneModel?
   material        CaseMaterial?
   finish          CaseFinish?
-  color           CaseColor?
   croppedImageUrl String?
-  order           Order[]
+  Order           Order[]
 }
 
 model User {
-   id          String     @id @default(cuid())
-  email       String
-  Order       Order[]
+  id    String  @id @default(cuid())
+  email String
+  Order Order[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -73,20 +73,20 @@ model Order {
   configuration   Configuration @relation(fields: [configurationId], references: [id])
   user            User          @relation(fields: [userId], references: [id])
   userId          String
+  amount          Float
   isPaid          Boolean       @default(false)
   status          OrderStatus   @default(awaiting_shipment)
-  amount          Float
 
-  shippingAdress   ShippingAdress? @relation(fields: [shippingAdressId], references: [id])
-  shippingAdressId String?
-  billingAdress    BillingAdress?  @relation(fields: [billingAdressId], references: [id])
-  billingAdressId  String?
+  shippingAddress   ShippingAddress? @relation(fields: [shippingAddressId], references: [id])
+  shippingAddressId String?
+  billingAddress    BillingAddress?  @relation(fields: [billingAddressId], references: [id])
+  billingAddressId  String?
 
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updated   DateTime @updatedAt
 }
 
-model ShippingAdress {
+model ShippingAddress {
   id          String  @id @default(cuid())
   name        String
   street      String
@@ -98,7 +98,7 @@ model ShippingAdress {
   orders      Order[]
 }
 
-model BillingAdress {
+model BillingAddress {
   id          String  @id @default(cuid())
   name        String
   street      String

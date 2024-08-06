@@ -13,6 +13,7 @@ interface PageProps {
 
 const Page = async({searchParams}: PageProps) => {
   const {id} = searchParams
+  
 
   if(!id || typeof id !== "string") {
     return notFound();
@@ -26,7 +27,7 @@ const Page = async({searchParams}: PageProps) => {
     return notFound();
   }
 
-  return <DesignPreview configuration={configuration}/>
+  return <DesignPreview configuration={configuration} />
 }
 
 export default Page

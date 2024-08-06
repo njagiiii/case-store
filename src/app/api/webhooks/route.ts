@@ -37,9 +37,9 @@ export async function POST(req: Request) {
       if (!userId || orderId) {
         throw new Error("Invalid metadata");
       }
-      // get the billing and shipping adress of the user
-      const billingAdress = session.customer_details!.address;
-      const shippingAdress = session.shipping_details!.address;
+      // get the billing and shipping adress of the user from db
+      const billingAddress = session.customer_details!.address;
+      const shippingAddress = session.shipping_details!.address;
 
       // update the order table that the user has paid
       await db.order.update({
@@ -48,25 +48,25 @@ export async function POST(req: Request) {
         },
         data: {
           isPaid: true,
-          shippingAdress: {
+          shippingAddress: {
             create: {
               name: session.customer_details!.name!,
-              city: shippingAdress!.city!,
-              country: shippingAdress!.country!,
-              postalCode: shippingAdress!.postal_code!,
-              street: shippingAdress!.line1!,
-              state: shippingAdress!.state,
+              city: shippingAddress!.city!,
+              country: shippingAddress!.country!,
+              postalCode: shippingAddress!.postal_code!,
+              street: shippingAddress!.line1!,
+              state: shippingAddress!.state,
             },
           },
 
-          billingAdress: {
+          billingAddress: {
             create: {
               name: session.customer_details!.name!,
-              city: billingAdress!.city!,
-              country: billingAdress!.country!,
-              postalCode: billingAdress!.postal_code!,
-              street: billingAdress!.line1!,
-              state: billingAdress!.state,
+              city: billingAddress!.city!,
+              country: billingAddress!.country!,
+              postalCode: billingAddress!.postal_code!,
+              street: billingAddress!.line1!,
+              state: billingAddress!.state,
             },
           },
         },
