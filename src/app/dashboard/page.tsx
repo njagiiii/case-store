@@ -109,7 +109,7 @@ const DashboardPage = async () => {
                       <TableHead>Customer</TableHead> 
                       <TableHead className='hidden sm:table-cell'> Status</TableHead> 
                       <TableHead className='hidden sm:table-cell'> Purchase date</TableHead> 
-                      <TableHead>Amount</TableHead> 
+                      <TableHead className='text-right'>Amount</TableHead> 
                     </TableRow>
                 </TableHeader>
                 <TableBody>
