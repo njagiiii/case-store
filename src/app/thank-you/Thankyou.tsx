@@ -55,7 +55,7 @@ const Thankyou = () => {
                 <h1 className="mt-2 text-4xl font-bold tracking-tight">Your case is on the way!</h1>
                 <p className="mt-2 text-base text-zinc-500">We've received your order and are now processing it</p>
 
-                <div className="mt012 text-sm font-medium">
+                <div className="mt-12 text-sm font-medium">
                     <p className="text-zinc-900">Order number</p>
                     <p className="mt-2 text-zinc-500">{orderId}</p>
                 </div>
