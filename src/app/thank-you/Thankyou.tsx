@@ -59,6 +59,17 @@ const Thankyou = () => {
                     <p className="text-zinc-900">Order number</p>
                     <p className="mt-2 text-zinc-500">{orderId}</p>
                 </div>
+
+                <div className="mt-10 border-t border-zinc-200">
+                    <div className="mt-10 flex flex-auto flex-col">
+                        <h4 className="font-semibold text-zinc-900">You made a great choice!</h4>
+                        <p className="mt-2 text-sm text-zinc-600">
+                            We at CaseStore beleive that a phone case doesn't only need to look good,
+                            but also last you years to come. We offer a 5-year print guarantee. If
+                            your case isn't of the highest quality, we'll replace it for free.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
