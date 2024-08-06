@@ -34,7 +34,7 @@ export async function POST(req: Request) {
         orderId: null,
       };
 
-      if (!userId || orderId) {
+      if (!userId || !orderId) {
         throw new Error("Invalid metadata");
       }
       // get the billing and shipping adress of the user from db
