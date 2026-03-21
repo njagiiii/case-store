@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Case Store 🛍️
 
-## Getting Started
+A full-stack e-commerce platform for custom phone case design and purchase. Built with modern web technologies and integrated with Stripe for secure payment processing.
 
-First, run the development server:
+![Case Store](https://img.shields.io/badge/Live-Demo-brightgreen)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+
+## 🌟 Features
+
+- **Interactive Product Configurator** - Real-time preview of custom phone case designs
+- **Secure Payments** - Stripe integration for safe and reliable transactions
+- **User Authentication** - Secure login and user account management
+- **Admin Dashboard** - Manage products, orders, and users efficiently
+- **Responsive Design** - Optimized for all devices and screen sizes
+- **Real-time Updates** - Dynamic order status and payment confirmation
+
+## 🚀 Live Demo
+
+Check out the live application: [case-store-beta.vercel.app](https://case-store-beta.vercel.app)
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- **Next.js 14** - React framework with server-side rendering
+- **TypeScript** - Type-safe JavaScript
+- **React** - UI component library
+- **Tailwind CSS** - Utility-first CSS framework
+- **Shadcn UI** - Re-usable component library
+
+### Backend
+
+- **Node.js** - JavaScript runtime
+- **Next.js API Routes** - Serverless API endpoints
+- **MongoDB** - NoSQL database
+- **Stripe API** - Payment processing
+
+### Deployment
+
+- **Vercel** - Hosting and continuous deployment
+
+## 📦 Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/njagiiii/case-store.git
+
+# Navigate to project directory
+cd case-store
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+# Create a .env.local file with:
+# DATABASE_URL=your_mongodb_connection_string
+# STRIPE_SECRET_KEY=your_stripe_secret_key
+# NEXT_PUBLIC_STRIPE_PUBLIC_KEY=your_stripe_public_key
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open <http://localhost:3000> to view it in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 Key Implementations
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Payment Integration
 
-## Learn More
+- Stripe checkout session creation
+- Webhook handling for payment confirmation
+- Secure payment data handling
+- Order status tracking
 
-To learn more about Next.js, take a look at the following resources:
+### Product Configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Dynamic product customization
+- Real-time preview updates
+- Image upload and processing
+- Configuration state management
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Admin Features
 
-## Deploy on Vercel
+- Product management (CRUD operations)
+- Order tracking and management
+- User administration
+- Sales analytics
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📱 Screenshots
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+*Add screenshots of your application here*
+
+## 🧪 What I Learned
+
+- Implementing secure payment gateway integration
+- Building type-safe applications with TypeScript
+- Server-side rendering with Next.js
+- Database design and management with MongoDB
+- Component-based architecture patterns
+- Production deployment optimization
+
+## 🔮 Future Enhancements
+
+- [ ] Add product reviews and ratings
+- [ ] Implement email notifications
+- [ ] Add more customization options
+- [ ] Create mobile app version
+- [ ] Add social media sharing
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👤 Author
+
+**Grace M. Njagi**
+
+- GitHub: [@njagiiii](https://github.com/njagiiii)
+- LinkedIn: [Grace Makena](https://www.linkedin.com/in/grace-makena-390483239)
+- Email: keshgrace62@gmail.com
+
+## 🙏 Acknowledgments
+
+- Built as part of my software development portfolio
+- Inspired by modern e-commerce platforms
+- Thanks to the open-source community
+
+-----
+
+⭐ If you found this project interesting, please give it a star!
