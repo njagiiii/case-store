@@ -88,10 +88,6 @@ Open <http://localhost:3000> to view it in your browser.
 - User administration
 - Sales analytics
 
-## 📱 Screenshots
-
-*Add screenshots of your application here*
-
 ## 🧪 What I Learned
 
 - Implementing secure payment gateway integration
